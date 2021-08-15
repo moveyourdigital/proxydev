@@ -1,0 +1,6 @@
+{
+  "upstreams": {
+    "api.local": "http://localhost:8081",
+    "app.local": "http://localhost:8080"
+  }
+}
