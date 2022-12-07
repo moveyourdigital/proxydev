@@ -1,16 +1,29 @@
 {
   "name": "@moveyourdigital/proxydev",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.3.0",
+  "description": "Generates a local https proxy for development",
+  "main": "build/index.js",
+  "bin": {
+    "proxydev": "./build/index.js"
+  },
   "scripts": {
-    "start": "node index.js",
+    "start": "node build/index.js",
+    "build": "tsc",
+    "watch": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vitor Carvalho <lightningspirit@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1",
-    "http-proxy": "^1.18.1"
+    "bandersnatch": "1.11.0",
+    "express": "4.18.1",
+    "http-proxy": "1.18.1",
+    "ssl-root-cas": "1.3.1"
+  },
+  "devDependencies": {
+    "@types/follow-redirects": "^1.14.1",
+    "@types/http-proxy": "1.17.9",
+    "@types/node": "18.7.18",
+    "typescript": "4.8.3"
   }
 }

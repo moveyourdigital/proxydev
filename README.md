@@ -6,17 +6,34 @@ And, that's all! Doesn't do anything else, does **not** recovers from any error 
 
 It is a simple HTTP proxy that one can use for development purposes.
 
+### Pre-requisite
+1. Install [mkcert](https://github.com/FiloSottile/mkcert) and generate a local CA
+2. Make sure your browsers trust your local CA by running `mkcert -install`
+
 ### Usage
+
 1. Create a `config.json` file in the root of this app:
 ```json
 {
+  "sni": [
+    "api.local",
+    "app.local",
+    "*.local",
+    "localhost",
+    "127.0.0.1",
+    "::1"
+  ],
   "upstreams": {
     "api.local": "http://localhost:8081",
     "app.local": "http://localhost:8080"
   }
 }
 ```
-2. Start the app directly
+2. Generate the local certificate
+```sh
+
+```
+3. Start the app directly
 ```sh
 npm start
 ```

@@ -1,4 +1,12 @@
 {
+  "sni": [
+    "api.local",
+    "app.local",
+    "*.local",
+    "localhost",
+    "127.0.0.1",
+    "::1"
+  ],
   "upstreams": {
     "api.local": "http://localhost:8081",
     "app.local": "http://localhost:8080"
